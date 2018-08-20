@@ -2,5 +2,5 @@
 
 Grupo: 
 Sofia Baracat Lapenta Janzantti,
-Igor Ricardo Gonçalvez Lousada,
+Igor Ricardo Gonçalves Lousada,
 Gisely da Silva Macedo

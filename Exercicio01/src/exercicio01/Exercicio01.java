@@ -14,7 +14,7 @@ public class Exercicio01{
         home.setVisible(true);
         
         int op = 0;
-        ArrayList<String> nomes = new ArrayList();
+       // ArrayList<Pessoa> listaPessoas = new ArrayList();
         Scanner scanner = new Scanner(System.in);
         while (true){
             /*System.out.println("\n( 1 ) - Cadastrar Nome");

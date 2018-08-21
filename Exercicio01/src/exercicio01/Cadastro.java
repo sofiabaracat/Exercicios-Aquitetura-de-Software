@@ -4,13 +4,15 @@
  * and open the template in the editor.
  */
 package exercicio01;
+import java.util.*;
 
 /**
  *
  * @author sofia
  */
 public class Cadastro extends javax.swing.JFrame {
-
+    
+    int cont = 0;
     /**
      * Creates new form Cadastro
      */
@@ -67,6 +69,11 @@ public class Cadastro extends javax.swing.JFrame {
         });
 
         btnCadastrar.setText("Cadastrar");
+        btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastrarActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Preencha os dados abaixo para realizar o cadastro");
 
@@ -151,6 +158,28 @@ public class Cadastro extends javax.swing.JFrame {
     private void jTextFieldIdadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldIdadeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldIdadeActionPerformed
+
+    private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
+         Pessoa pe = new Pessoa();
+         Pais pa = new Pais();
+         pe.setNome(jTextFieldNome.getText());
+         //int Tel = Integer.parseInt(jTextFieldTel.getText());
+         pe.setTelefone(Integer.parseInt(jTextFieldTel.getText())); 
+         //cliente.setIdade(Integer.parseInt(textFieldIdade.getValue().toString()));
+         pe.setIdade(Integer.parseInt(jTextFieldIdade.getText()));  
+         pe.setPais(jTextFieldPais.getText());
+         
+         pe.listaPessoas.add(pe);
+         Iterator it = pa.listaPaises.iterator();
+         while (it.hasNext()) {
+            if(pa.getNome().equals(jTextFieldPais.getText())){
+               cont++;
+            }
+            if (cont > 0){
+               pa.setNome(jTextFieldPais.getText()); 
+            }
+        }             
+    }//GEN-LAST:event_btnCadastrarActionPerformed
 
     /**
      * @param args the command line arguments

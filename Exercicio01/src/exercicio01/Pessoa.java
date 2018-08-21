@@ -1,7 +1,7 @@
 package exercicio01;
 
 import javax.swing.JOptionPane;
-
+import java.util.*;
 /**
  *
  * @author gisely
@@ -13,14 +13,15 @@ public class Pessoa {
     int telefone;
     double limite;
    
-    public Pessoa(String nome, int idade, String pais, int telefone, double limite) {
+    ArrayList<Pessoa> listaPessoas = new ArrayList();
+   /* public Pessoa(/*String nome, int idade, String pais, int telefone, double limite) {
         this.nome = nome;
         this.idade = idade;
         this.pais = pais;
         this.telefone = telefone;
         this.limite = limite;
         
-  }
+  }*/
     
     public String getNome(){
          return nome;      

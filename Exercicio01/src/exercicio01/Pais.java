@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package exercicio01;
-
+import java.util.*;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,6 +12,8 @@ import javax.swing.JOptionPane;
  * @author igorl_000
  */
 public class Pais {
+    
+    ArrayList<Pais> listaPaises = new ArrayList();
     
     private String nome;
     private String sigla;
@@ -34,7 +36,7 @@ public class Pais {
         return sigla;
     }
     
-    public void setSigla(String sigla) throws Exception{
+    public void setSigla(String sigla){
         if(sigla.equals("")){
             JOptionPane.showMessageDialog(null, "Campo 'Sigla' Obrigatório", "ERRO",JOptionPane.OK_OPTION);
         }

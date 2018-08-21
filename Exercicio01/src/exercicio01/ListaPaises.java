@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package exercicio01;
-
+import java.util.*;
+import java.lang.*;
 /**
  *
  * @author sofia
@@ -104,7 +105,15 @@ public class ListaPaises extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ListaPaises().setVisible(true);
+            
+                ArrayList<String> pais = new ArrayList();
+
+                Iterator it = pais.iterator();
+                
+                while (it.hasNext()) {
+                    System.out.println(it.next());
+                }
+                 new ListaPaises().setVisible(true);
             }
         });
     }

@@ -120,7 +120,8 @@ public class Home extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCadPessoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadPessoaActionPerformed
-        // TODO add your handling code here:
+        Cadastro ca = new Cadastro();
+        ca.setVisible(true);
     }//GEN-LAST:event_btnCadPessoaActionPerformed
 
     private void btnCadPaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadPaisActionPerformed
@@ -128,11 +129,13 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCadPaisActionPerformed
 
     private void btnConsulPaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsulPaisActionPerformed
-        // TODO add your handling code here:
+        ListaPaises lp = new ListaPaises();
+        lp.setVisible(true);
     }//GEN-LAST:event_btnConsulPaisActionPerformed
 
     private void btnConsulPessoasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsulPessoasActionPerformed
-        // TODO add your handling code here:
+        ListaPessoas lp = new ListaPessoas();
+        lp.setVisible(true);
     }//GEN-LAST:event_btnConsulPessoasActionPerformed
 
     /**

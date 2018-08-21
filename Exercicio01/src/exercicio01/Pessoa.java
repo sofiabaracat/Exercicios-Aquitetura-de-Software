@@ -53,7 +53,7 @@ public class Pessoa {
     
         Pais pais = new Pais();
     
-        if(getCodTel().equals(pais.getCodigo().toString())){
+        if(getCodTel().equals(pais.getCodigo())){
             JOptionPane.showMessageDialog(null, "DDI inválido", "ERRO", JOptionPane.ERROR_MESSAGE);
         }else{
             this.codTel = codTel;

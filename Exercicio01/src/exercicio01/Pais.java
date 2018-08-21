@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 package exercicio01;
-import java.util.*;
+
 import javax.swing.JOptionPane;
+import java.util.*;
 
 /**
  *
@@ -17,7 +18,7 @@ public class Pais {
     
     private String nome;
     private String sigla;
-    private Integer codigo;
+    private String codigo;
     
     public String getNome(){
         return nome;
@@ -25,7 +26,7 @@ public class Pais {
     
     public void setNome (String nome){
         if(nome.equals("")){
-            JOptionPane.showMessageDialog(null, "Campo 'Nome' Obrigatório", "ERRO",JOptionPane.OK_OPTION);
+            JOptionPane.showMessageDialog(null, "Campo Nome Obrigatório", "ERRO",JOptionPane.OK_OPTION);
         }
         else{
             this.nome = nome;
@@ -38,27 +39,21 @@ public class Pais {
     
     public void setSigla(String sigla){
         if(sigla.equals("")){
-            JOptionPane.showMessageDialog(null, "Campo 'Sigla' Obrigatório", "ERRO",JOptionPane.OK_OPTION);
+            JOptionPane.showMessageDialog(null, "Campo Sigla Obrigatório", "ERRO",JOptionPane.OK_OPTION);
         }
         else{
             this.sigla = sigla;
         }
     }
     
-    public Integer getCodigo(){
+    public String getCodigo(){
         return codigo;
     }
     
-    public void setCodigo(Integer codigo) throws Exception{
-        try{
-                codigo = Integer.parseInt("");
-            }
-        catch(NumberFormatException a){
-            JOptionPane.showMessageDialog(null, "Somente números", "ERRO",JOptionPane.OK_OPTION);
-        }
+    public void setCodigo(String codigo){
         
-        if(codigo.equals(null)){
-            JOptionPane.showMessageDialog(null, "Campo 'Código' Obrigatório", "ERRO",JOptionPane.OK_OPTION);
+        if(codigo.equals(null) || ((!(codigo.matches("[0-9][0-9][0-9]"))) || (!(codigo.matches("[0-9][0-9]"))) || (!(codigo.matches("[0-9]"))))){
+            JOptionPane.showMessageDialog(null, "Campo Código Obrigatório", "ERRO",JOptionPane.OK_OPTION);
         }
         else{
             this.codigo = codigo;

@@ -39,6 +39,8 @@ public class Cadastro extends javax.swing.JFrame {
         jTextFieldPais = new javax.swing.JTextField();
         btnCadastrar = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jTextFieldDDI = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,6 +79,8 @@ public class Cadastro extends javax.swing.JFrame {
 
         jLabel5.setText("Preencha os dados abaixo para realizar o cadastro");
 
+        jLabel6.setText("DDI");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -95,8 +99,9 @@ public class Cadastro extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
-                            .addComponent(jLabel2))
-                        .addGap(67, 67, 67)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel6))
+                        .addGap(60, 60, 60)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,7 +114,9 @@ public class Cadastro extends javax.swing.JFrame {
                                 .addComponent(btnCadastrar)
                                 .addGap(40, 40, 40))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextFieldTel, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextFieldTel, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldDDI, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(93, Short.MAX_VALUE)
@@ -123,8 +130,13 @@ public class Cadastro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
-                    .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldDDI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(jTextFieldTel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -168,7 +180,7 @@ public class Cadastro extends javax.swing.JFrame {
          //cliente.setIdade(Integer.parseInt(textFieldIdade.getValue().toString()));
          pe.setIdade(Integer.parseInt(jTextFieldIdade.getText()));  
          pe.setPais(jTextFieldPais.getText());
-         
+         pe.setCodTel(jTextFieldDDI.getText());
          pe.listaPessoas.add(pe);
          Iterator it = pa.listaPaises.iterator();
          while (it.hasNext()) {
@@ -178,7 +190,12 @@ public class Cadastro extends javax.swing.JFrame {
             if (cont > 0){
                pa.setNome(jTextFieldPais.getText()); 
             }
-        }             
+        }  
+         Pessoa p = new Pessoa();
+         it = p.listaPessoas.iterator();
+        while (it.hasNext()) {
+                        System.out.println(it.next());
+        }
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     /**
@@ -223,6 +240,8 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JTextField jTextFieldDDI;
     private javax.swing.JTextField jTextFieldIdade;
     private javax.swing.JTextField jTextFieldNome;
     private javax.swing.JTextField jTextFieldPais;

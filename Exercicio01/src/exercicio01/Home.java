@@ -125,7 +125,8 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCadPessoaActionPerformed
 
     private void btnCadPaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadPaisActionPerformed
-        // TODO add your handling code here:
+        CadastroPais cadP = new CadastroPais();
+        cadP.setVisible(true);
     }//GEN-LAST:event_btnCadPaisActionPerformed
 
     private void btnConsulPaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsulPaisActionPerformed

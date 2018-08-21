@@ -130,11 +130,7 @@ public class CadastroPais extends javax.swing.JFrame {
         
         pa.setNome(jTextFieldCadPais.getText());
         pa.setSigla(jTextFieldSigla.getText());
-        try {
-            pa.setCodigo(Integer.parseInt(jTextFieldDDI.getText()));
-        } catch (Exception ex) {
-            Logger.getLogger(CadastroPais.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        pa.setCodigo(jTextFieldDDI.getText());
         
     }//GEN-LAST:event_btnCadastrarPaisActionPerformed
 

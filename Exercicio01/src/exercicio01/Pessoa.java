@@ -11,17 +11,10 @@ public class Pessoa {
     int idade;
     String pais;
     int telefone;
+    String codTel;
     double limite;
    
     ArrayList<Pessoa> listaPessoas = new ArrayList();
-   /* public Pessoa(/*String nome, int idade, String pais, int telefone, double limite) {
-        this.nome = nome;
-        this.idade = idade;
-        this.pais = pais;
-        this.telefone = telefone;
-        this.limite = limite;
-        
-  }*/
     
     public String getNome(){
          return nome;      
@@ -51,6 +44,22 @@ public class Pessoa {
         this.telefone = telefone;
     }
     
+    public String getCodTel(){
+	return codTel;
+}
+
+    public void setCodTel(String codTel){
+	this.codTel = codTel;
+    
+        Pais pais = new Pais();
+    
+        if(getCodTel().equals(pais.getCodigo().toString())){
+            JOptionPane.showMessageDialog(null, "DDI inválido", "ERRO", JOptionPane.ERROR_MESSAGE);
+        }else{
+            this.codTel = codTel;
+    }
+    }
+    
     public String getPais(){
         return pais;
     }
@@ -76,6 +85,5 @@ public class Pessoa {
         if (getPais().equals("BRASIL")){
             limite+= 100.00;
         }
-    }
-    
+    }                  
 }
